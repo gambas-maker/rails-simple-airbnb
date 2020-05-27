@@ -1,0 +1,14 @@
+<h1>Simple Airbnb</h1>
+
+<h2>All our flats <%= (@flats.count)%></h2>
+<div id="wrapper">
+  <% @flats.each do |flat| %>
+  <div class="container">
+     <h3><%= flat.name %></h3>
+     <h4><%= flat.address %></h4>
+     <h5><%= flat.description%></h5>
+     <p><%= flat.price_per_night %>€</p>
+     <p>Number of guests<%= flat.number_of_guests %></p>
+  </div>
+  <% end %>
+</div>
